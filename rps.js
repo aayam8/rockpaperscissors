@@ -39,15 +39,15 @@ function playround(playerSelection, computerSelection){
  let computerChoice = computerSelection.toLowerCase(); 
  let id = 0;
  if(playerSelection == computerChoice){
-  let id = 0;
+  id = 0;
   return id; 
   } else if ((computerChoice == 'rock' && playerSelection == 'scissor') ||
     (computerChoice == 'paper' && playerSelection == 'rock') ||
     (computerChoice == 'scissor' && playerSelection == 'paper')){
-    let id = 1;
+    id = 1;
     return id;
   } else {
-    let id = 2;
+    id = 2;
     return id;
   }
 }
@@ -58,11 +58,11 @@ let computerChoice = '';
 let roundInformation = 0;   
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    let playerSelection = button.id.toLowerCase();
+    playerSelection = button.id.toLowerCase();
     console.log('Your Selection is : ' + playerSelection);
-    let computerChoice = getComputerChoice();
+    computerChoice = getComputerChoice();
     console.log("Computer's Selection is :" + computerChoice);
-    let roundInformation = playround(playerSelection, computerChoice);
+    roundInformation = playround(playerSelection, computerChoice);
     console.log(roundInformation);
     Results(roundInformation);
   });
